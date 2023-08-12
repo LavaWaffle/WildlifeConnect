@@ -1,5 +1,5 @@
-export default function Logo() {
+export default function Logo({classes}: {classes: string}) {
     return (
-        <img className="xl:w-[65%] lg:w-[73%] md:w-[75%]" src="./Logo.png" alt="Logo" />
+        <img className={classes} src="./Logo.png" alt="Logo" />
     )
 }

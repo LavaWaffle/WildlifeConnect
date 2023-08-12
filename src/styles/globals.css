@@ -9,7 +9,7 @@
 }
 
 .nav-item {
-    @apply font-inter font-extrabold text-[24px] text-wild-400 text-center w-60
+    @apply font-inter font-extrabold text-[24px] text-wild-400 text-center lg:w-60
 }
 
 .nav-item:hover {
