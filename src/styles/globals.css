@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    @apply box-border
+}
+
+.nav-item {
+    @apply font-inter font-extrabold text-[30px] text-wild-400 text-center
+}
