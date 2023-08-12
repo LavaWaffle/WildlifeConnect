@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 type props = {
@@ -15,7 +16,7 @@ export default function Layout({ children }: props) {
                 { children }
             </main>
             <div className="grow-0">
-                footer
+                <Footer />
             </div>
         </div>
     )

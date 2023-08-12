@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800;900&family=Lato&family=Oswald&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,5 +9,17 @@
 }
 
 .nav-item {
-    @apply font-inter font-extrabold text-[30px] text-wild-400 text-center
+    @apply font-inter font-extrabold text-[24px] text-wild-400 text-center w-60
+}
+
+.nav-item:hover {
+    @apply
+    hover:underline 
+    hover:text-emerald-700
+    hover:duration-1000 
+    
+}
+
+.footer-left-item {
+    @apply font-lato font-normal text-[21px] text-white text-left w-44 uppercase
 }

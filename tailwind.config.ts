@@ -6,6 +6,8 @@ export default {
     extend: {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
+        'lato': ['Lato', 'sans-serif'],
+        'oswald': ['Oswald', 'sans-serif'],
       },
       colors: {
         'background': '#DAD7CD',
