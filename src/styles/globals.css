@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+textarea:focus, input:focus, span:focus {
+    outline: none;
+}
+
 * {
     @apply box-border
 }
@@ -31,9 +35,59 @@
     @apply font-lato font-normal text-[21px] text-white text-left w-44 uppercase
 }
 .coolBtn {
-    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl  bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full 
+    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl  bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full hover:text-[#354F52] hover:bg-[#DAD7CD] hover:border-[#354F52]
 }
 
 .coolLink {
-    @apply cursor-pointer
+    @apply cursor-pointer   
 }
+.quickBlurb {
+    @apply bg-[#84A98C] text-[#F5F5F5] font-normal font-inter xl:text-2xl lg:text-xl md:text-lg lg:leading-[3rem] text-center mt-8 lg:mt-0 
+}
+.blurbImg {
+    @apply xl:w-[12rem] xl:h-[12rem]  w-[10rem]
+}
+.blurbBox { 
+    @apply bg-wild-200 px-[4rem] py-[3rem] flex lg:flex-row flex-col-reverse items-center justify-center space-x-0 lg:space-x-8 rounded-3xl  xl:px-[3rem] lg:px-[4rem] lg:mx-[8rem] mx-[0rem] my-[2rem]
+}
+.boldOrange {
+    @apply text-[#FAAA40] font-bold
+}
+.contentBlurb {
+    @apply xl:px-[3rem] lg:px-[4rem] px-[4rem] py-[3rem] space-x-0 lg:space-x-8 
+}
+.blueBlurb {
+    @apply bg-[#2F3E46]  text-[#84A98C]
+}
+.greenBlurb {
+    @apply bg-[#52796F] text-[#DAD7CD]
+}
+
+.whiteHeader {
+    @apply text-[#FFFFFF] font-inter font-bold text-5xl
+}
+.insideText {
+    @apply font-inter font-bold xl:text-[20px] lg:text-[16px]
+}
+.smallWhiteHeader {
+    @apply  font-inter font-bold text-[36px] text-[#FFFFFF]
+}
+.whiteCircleBorder {
+    @apply rounded-[50px] border-[#FFFFFF] 
+}
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  

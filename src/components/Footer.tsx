@@ -7,23 +7,23 @@ export default function Footer() {
                         {/* left */}
                         <table className="lg:w-1/2 lg:h-[85%] flex lg:justify-end justify-center font-normal my-5 mx-5">
                             <tbody className="space-y-10 ">
-                            <tr className="flex xl:space-x-16 space-x-8">
-                                <td className="footer-left-item footer-item">about us</td>
+                            <tr className="flex xl:space-x-16 space-x-8 items-center">
+                                <td className="footer-left-item footer-item ">about us</td>
                                 <td className="footer-left-item ml-12 footer-item">our initiatives</td>
                             </tr>
-                            <tr className="flex  xl:space-x-16 space-x-8">
+                            <tr className="flex  xl:space-x-16 space-x-8 items-center">
                                 <td className="footer-left-item footer-item">wildlife rehabilitation</td>
                                 <td className="footer-left-item ml-12 footer-item">get involved</td>
                             </tr>
-                            <tr className="flex  xl:space-x-16 space-x-8">
+                            <tr className="flex  xl:space-x-16 space-x-8 items-center">
                                 <td className="footer-left-item footer-item">educational resources</td>
                                 <td className="footer-left-item ml-12 footer-item">adopt an animal</td>
                             </tr>
-                            <tr className="flex  xl:space-x-16 space-x-8">
+                            <tr className="flex  xl:space-x-16 space-x-8 items-center">
                                 <td className="footer-left-item footer-item">community outreach</td>
                                 <td className="footer-left-item ml-12 footer-item">faq</td>
                             </tr>
-                            <tr className="flex  xl:space-x-16 space-x-8">
+                            <tr className="flex  xl:space-x-16 space-x-8 items-center">
                                 <td className="footer-left-item footer-item">terms of use</td>
                                 <td className="footer-left-item ml-12 footer-item">contact us</td>
                             </tr>
