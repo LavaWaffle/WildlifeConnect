@@ -12,6 +12,13 @@
     @apply font-inter font-extrabold text-[24px] text-wild-400 text-center lg:w-60
 }
 
+.footer-item:hover {
+    @apply cursor-pointer
+    hover:underline 
+    hover:text-green-500
+    hover:duration-1000 
+}
+
 .nav-item:hover {
     @apply
     hover:underline 
@@ -22,4 +29,11 @@
 
 .footer-left-item {
     @apply font-lato font-normal text-[21px] text-white text-left w-44 uppercase
+}
+.coolBtn {
+    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl  bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full 
+}
+
+.coolLink {
+    @apply cursor-pointer
 }
