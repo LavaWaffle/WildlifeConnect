@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+  }
+
 textarea:focus, input:focus, span:focus {
     outline: none;
 }
@@ -32,10 +36,10 @@ textarea:focus, input:focus, span:focus {
 }
 
 .footer-left-item {
-    @apply font-lato font-normal text-[21px] text-white text-left w-44 uppercase
+    @apply font-lato font-normal text-[21px] text-white text-left w-44 uppercase select-none;
 }
 .coolBtn {
-    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl  bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full hover:text-[#354F52] hover:bg-[#DAD7CD] hover:border-[#354F52] ease-in duration-300
+    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl text-center bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full hover:text-[#354F52] hover:bg-[#DAD7CD] hover:border-[#354F52] ease-in duration-300
 }
 
 .coolLink {
@@ -72,6 +76,27 @@ textarea:focus, input:focus, span:focus {
 .smallWhiteHeader {
     @apply  font-inter font-bold text-[36px] text-[#FFFFFF]
 }
+.adoptHeader {
+    @apply font-oswald font-thin text-[#2F3E46] lg:text-[70px] text-[40px] tracking-[.05em]
+}
+.adoptText {
+    @apply font-lato font-normal text-[#52796F] lg:text-[30px] text-[20px] text-center
+}
+.adoptOrange {
+    @apply font-inter font-extrabold text-[#E29E44] xl:text-[50px] text-[40px] 
+}
+.adoptSubheading {
+    @apply font-inter font-extrabold text-[#CAD2C5] xl:text-[20px] text-[18px]
+}
+.adoptDescription {
+    @apply font-inter font-normal text-[#CAD2C5] xl:text-[20px] lg:text-[16px]
+}
+.adoptPkgHeader {
+    @apply xl:text-[24px] lg:text-[22px] md:text-[20px] text-[18px] text-[#2F3E46] font-inter font-bold
+}
+.adoptPkgSub {
+    @apply xl:text-[22px] lg:text-[20px] md:text-[18px] text-[18px] text-[#FFFFFF] font-inter font-normal 
+}
 .whiteCircleBorder {
     @apply rounded-[50px] border-[#FFFFFF] 
 }
@@ -81,13 +106,19 @@ textarea:focus, input:focus, span:focus {
     padding-bottom: 56.25%;
     position: relative;
     height: 0;
-  }
-  
-  .video-responsive iframe {
+}
+
+.video-responsive iframe {
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     position: absolute;
-  }
-  
+}
+
+.fade-in-image { animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

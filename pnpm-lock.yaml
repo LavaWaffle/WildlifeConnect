@@ -41,6 +41,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  react-flip-ticker:
+    specifier: ^1.0.2
+    version: 1.0.2(react@18.2.0)
   superjson:
     specifier: ^1.13.1
     version: 1.13.1
@@ -91,6 +94,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
+  tailwindcss-animate:
+    specifier: ^1.0.6
+    version: 1.0.6(tailwindcss@3.3.3)
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -2498,6 +2504,14 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-flip-ticker@1.0.2(react@18.2.0):
+    resolution: {integrity: sha512-HtS60oTG3BNV5UM6Ay+v0fDVVwCfmY2nKyjkNPv/m4HGEY6TESK2xuWHARimfimlwF6L3eXlI2mfcKeUbRooPg==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -2766,6 +2780,14 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /tailwindcss-animate@1.0.6(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-4WigSGMvbl3gCCact62ZvOngA+PRqhAn7si3TQ3/ZuPuQZcIEtVap+ENSXbzWhpojKB8CpvnIsrwBu8/RnHtuw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      tailwindcss: 3.3.3
     dev: true
 
   /tailwindcss@3.3.3:

@@ -1,9 +1,24 @@
 import Logo from "@/components/Logo";
 import StatCard from "@/components/StatCard";
+import { useIsVisible } from "@/hooks/useIsVisible";
 import { api } from "@/utils/api";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const owo = api.location.location.useQuery({}, {refetchOnWindowFocus: false});
+
+  const [happened, setHappened] = useState(false);
+
+  const ref = useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+  const isVisible = useIsVisible(ref);
+
+  useEffect(() => {
+    if (isVisible && !happened) {
+      setTimeout(() => {
+        setHappened(true);
+      }, 600);
+    }
+  }, [isVisible]);
 
   return (
     <>
@@ -16,9 +31,9 @@ export default function Home() {
 
       {/* location and thingies near me */}
       <section className="w-full">
-        <div className="flex lg:flex-row flex-col lg:justify-between py-10 px-20">
+        <div ref={ref} className="flex lg:flex-row flex-col lg:justify-between lg:items-center py-10 px-20">
           {/* left location */}
-          <div className="lg:w-[55%] bg-wild-300 flex flex-col rounded-3xl">
+          <div className={`lg:w-[55%] bg-wild-300 flex flex-col rounded-3xl ${happened ? "" : isVisible ? "animate-in" : "opacity-0"} lg:slide-in-from-left lg:fade-in-image duration-500`}>
             {/* percise location */}
             <div className="text-center text-7xl">
               <div className="py-3"></div>
@@ -31,12 +46,12 @@ export default function Home() {
             {/* learn more */}
             <div className="flex justify-between items-center py-16 px-8">
               <p className="text-white text-xs 2xl:text-2xl xl:text-xl lg:text-base md:text-lg sm:text-sm  w-[65%]">Encountered an <strong className="text-[#E29E44]">Injured or Lost Animal?</strong> <br/> <strong>Talk to our <span className="text-[#E29E44]">Chatbot</span></strong> to Determine if Calling a Rehabilitation Center is Needed!</p>
-              <button className="coolBtn">LEARN MORE</button>
+              <a href="/animalgpt" className="coolBtn">LEARN MORE</a>
             </div>
             <p className="text-white text-2xl">{owo.data ? !owo.data.isInNJ ? "*You aren't in NJ, so we've set your location to Lambertville" : "" : ""}</p>
           </div>
           {/* right map */}
-          <div className="lg:w-[40%] lg:mt-0 mt-6 block">
+          <div className={`lg:w-[40%] lg:mt-0 mt-6 block ${happened ? "" : isVisible ? "animate-in" : "opacity-0"} lg:slide-in-from-right duration-500`}>
             <iframe className="w-full border-4 border-wild-300 rounded-3xl" src={owo.data ? 
               owo.data.rehab ? owo.data.rehab.src 
               : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12172.065935309933!2d-74.76881695000002!3d40.29759295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3fd2cf2d88343%3A0x47f2b1997c276cc2!2sJazzercise!5e0!3m2!1sen!2sus!4v1691886766069!5m2!1sen!2sus"
@@ -45,6 +60,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="opacity-0" ref={ref}></div>
       {/* STATS */}
       <section className="w-full">
         <div className="flex lg:flex-row flex-col py-10 px-20 lg:space-x-8 space-x-0 space-y-8 lg:space-y-0">

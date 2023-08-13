@@ -13,14 +13,14 @@ export default function Footer() {
                             </tr>
                             <tr className="flex  xl:space-x-16 space-x-8 items-center">
                                 <td className="footer-left-item footer-item">wildlife rehabilitation</td>
-                                <td className="footer-left-item ml-12 footer-item">get involved</td>
+                                <td className="footer-left-item ml-12 footer-item"><a href="/getinvolved">get involved</a></td>
                             </tr>
                             <tr className="flex  xl:space-x-16 space-x-8 items-center">
-                                <td className="footer-left-item footer-item">educational resources</td>
-                                <td className="footer-left-item ml-12 footer-item">adopt an animal</td>
+                                <td className="footer-left-item footer-item"><a href="/education">educational resources</a></td>
+                                <td className="footer-left-item ml-12 footer-item"><a href="/adopt">adopt an animal</a></td>
                             </tr>
                             <tr className="flex  xl:space-x-16 space-x-8 items-center">
-                                <td className="footer-left-item footer-item">community outreach</td>
+                                <td className="footer-left-item footer-item"><a href="animalgpt">ai helper</a></td>
                                 <td className="footer-left-item ml-12 footer-item">faq</td>
                             </tr>
                             <tr className="flex  xl:space-x-16 space-x-8 items-center">

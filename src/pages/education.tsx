@@ -1,5 +1,3 @@
-import Myvideo from "../components/Myvideo";
-
 export default function education() {
     return (
         <>
@@ -23,7 +21,7 @@ export default function education() {
                                     <div className="insideText inline-block columns-1 w-full ">
                                     A brief history and summary of Wildlife rehab over the past century <br/> provided by the National Wildlife Rehabilitators Association.
                                     </div>
-                                    <button className="coolBtn "> <span className="px-10 py-10">READ</span></button>
+                                    <a target="_blank" href="https://cdn.ymaws.com/www.nwrawildlife.org/resource/resmgr/website_2021/brn_res_rehab_resources/brn_res_aspiring_rehabilitators/what_is_wr.pdf" className="coolBtn "> <span className="px-10 py-10">READ</span></a>
                                 </div>
                             </div>
                             <div id="right" className = "mt-10 pl-[2rem] lg:w-[40%] w-full flex justify-center ">
@@ -44,15 +42,15 @@ export default function education() {
                                     <div className="smallWhiteHeader  w-full">
                                         PBS UNTAMED: Wildlife Rehabilitation
                                     </div>
-                                    <div className="insideText inline-block columns-1 w-full ">
+                                    <div className="insideText inline-block columns-1 w-full">
                                         Join Center staff & several at-home permitted Virginia wildlife rehabilitators to learn more about what wildlife rehabilitators do, the invaluable service they provide to their communities, & the role that they play in conservation.
                                     </div>
-                                    <button className="coolBtn "> <span className="px-10 py-10">WATCH</span></button>
+                                    <button className="coolBtn"> <span className="px-10 py-10">WATCH</span></button>
                                 </div>
                             </div>
                             <div id="right" className = " pl-[2rem] lg:w-[40%] w-full flex justify-center ">
                                 <div className="flex items-center  h-full">
-                                    <Myvideo />
+                                <iframe width="370" height="250" src="https://www.youtube.com/embed/Lix-Lfb3d10" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}></iframe>
                                 </div>
                             </div>
                         </div>

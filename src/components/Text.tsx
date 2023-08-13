@@ -7,7 +7,7 @@ export default function Text({tex: text, author}: TextProps) {
     let bg = 'bg-[#2F3E46]';
     if (author == 'user') bg = 'bg-[#354F52]'
     return (
-        <li className={`w-full flex lg:px-[8rem] md:px-[4rem] px-[1rem] py-[0.5rem] items-start ${bg} lg:gap-6 border-b-2 border-black`}>
+        <li id={text} className={`w-full flex lg:px-[8rem] md:px-[4rem] px-[1rem] py-[0.5rem] items-start ${bg} lg:gap-6 border-b-2 border-black`}>
             <div className="!w-[4rem] h-[4rem] pt-[2rem]">
                 <img src={author == 'user' ? 'user.png' : 'bot.png'} alt={author} />
             </div>
