@@ -12,6 +12,7 @@ import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";
 import { ZodError } from "zod";
 import { OPEN_AI_API } from "@/server/open_ai";
+import { IP_INFO_WRAPPER } from "../ipinfo";
 
 /**
  * 1. CONTEXT
@@ -36,6 +37,7 @@ type CreateContextOptions = Record<string, never>;
 const createInnerTRPCContext = (_opts: CreateContextOptions) => {
   return {
     OPEN_AI_API,
+    IP_INFO_WRAPPER,
   };
 };
 
