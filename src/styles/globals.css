@@ -35,7 +35,7 @@ textarea:focus, input:focus, span:focus {
     @apply font-lato font-normal text-[21px] text-white text-left w-44 uppercase
 }
 .coolBtn {
-    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl  bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full hover:text-[#354F52] hover:bg-[#DAD7CD] hover:border-[#354F52]
+    @apply font-inter font-extrabold xl:p-6 xl:px-5 lg:p-2 md:p-2 sm:p-2 lg:text-xl  bg-[#354F52] text-2xl  text-[#CAD2C5] border-4 border-[#84A98C] rounded-full hover:text-[#354F52] hover:bg-[#DAD7CD] hover:border-[#354F52] ease-in duration-300
 }
 
 .coolLink {

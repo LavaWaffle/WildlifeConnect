@@ -52,7 +52,7 @@ export default function education() {
                             </div>
                             <div id="right" className = " pl-[2rem] lg:w-[40%] w-full flex justify-center ">
                                 <div className="flex items-center  h-full">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lix-Lfb3d10" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+                                    <Myvideo />
                                 </div>
                             </div>
                         </div>
