@@ -38,7 +38,11 @@ export default function Home() {
           </div>
           {/* right map */}
           <div className="lg:w-[40%] lg:mt-0 mt-6 block">
-            <iframe className="w-full" src={owo.data && owo.data.rehab ? owo.data.rehab.src : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12172.065935309933!2d-74.76881695000002!3d40.29759295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3fd2cf2d88343%3A0x47f2b1997c276cc2!2sJazzercise!5e0!3m2!1sen!2sus!4v1691886766069!5m2!1sen!2sus"} width="600" height="450" loading="lazy" allowFullScreen={false} referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe className="w-full" src={owo.data ? 
+              owo.data.rehab ? owo.data.rehab.src 
+              : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12172.065935309933!2d-74.76881695000002!3d40.29759295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3fd2cf2d88343%3A0x47f2b1997c276cc2!2sJazzercise!5e0!3m2!1sen!2sus!4v1691886766069!5m2!1sen!2sus"
+              : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12172.065935309933!2d-74.76881695000002!3d40.29759295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3fd2cf2d88343%3A0x47f2b1997c276cc2!2sJazzercise!5e0!3m2!1sen!2sus!4v1691886766069!5m2!1sen!2sus"
+            } width="600" height="450" loading="lazy" allowFullScreen={false} referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>

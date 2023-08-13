@@ -1,5 +1,5 @@
 import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
-import { IPinfo } from "node-ipinfo";
+import type { IPinfo } from "node-ipinfo";
 import { z } from "zod";
 
 type rehabCenter = {
@@ -51,8 +51,8 @@ const rehabs: rehabCenter[] = [
 		name: "Woodlands Wildlife Refuge",
 		animals: ["Mammals"],
 		src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.6480385544537!2d-74.99064992356654!3d40.57144904620746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c40a6126074077%3A0x41216fc849f07d60!2sWoodlands%20Wildlife%20Refuge!5e0!3m2!1sen!2sus!4v1691854934698!5m2!1sen!2sus",
-		lat: 40.57162426184517,
-		long: -74.988075003513610,
+		lat: 40.571624261,
+		long: -74.9880750035,
 	},
   	{
   		county: "Mercer County",
@@ -61,8 +61,8 @@ const rehabs: rehabCenter[] = [
 		name: "Mercer County Wildlife Center",
 		animals: ["Mammals", "Birds", "Reptiles", "Amphibians"],
 		src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.6408624708974!2d-74.9227861903909!3d40.32812741828911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ff3f693c4811%3A0xf11e26d0642c8521!2sWildlife%20Center%20Friends!5e0!3m2!1sen!2sus!4v1691855095940!5m2!1sen!2sus",
-		lat: 40.57162426184517,
-		long: -74.988075003513610,
+		lat: 40.571624261,
+		long: -74.9880750035,
 	},
 	{
 		county: null,
@@ -177,7 +177,7 @@ export const locationRouter = createTRPCRouter({
   location: publicProcedure
     .input(z.object({ text: z.string() }))
     .query(async ({ ctx }) => {
-      let retVal = {
+      const retVal = {
         isInNJ: false,
         city: "Lambertville",
         region: "New Jersey",
