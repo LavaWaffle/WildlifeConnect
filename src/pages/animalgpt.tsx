@@ -20,7 +20,7 @@ export default function AnimalGpt() {
     const [text, setText] = useState('');
     const [disabled, setDisabled] = useState(false);
     const [messages, setMessages] = useState<{content: string, role: 'assistant' | 'user'}[]>([]);
-    const fuckme = api.gpt.msgbot.useMutation();
+    const mutObj = api.gpt.msgbot.useMutation();
 
     const [firstTime, setFirstTime] = useState(true);
 
@@ -42,7 +42,7 @@ export default function AnimalGpt() {
         setMessages([...messages, {content: temp, role: 'user'}]);
         setDisabled(true);
         setText("");
-        const res = await fuckme.mutateAsync({msg_history: messages, newmsg: temp});
+        const res = await mutObj.mutateAsync({msg_history: messages, newmsg: temp});
         setDisabled(false);
         setMessages((messages) => [...messages, res.botmsg]);
     }
